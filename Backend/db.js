@@ -4,7 +4,7 @@ import { initSchema } from "./schema.js";
 export async function connectDB() {
     try {
         const connectionString = process.env.DB_CONN;
-        await mongoose.connect(connectionString, { dbName: "clkclk" });
+        await mongoose.connect(connectionString, { dbName: "task" });
         initSchema();
         console.log("Mongoose connected successfully");
     } catch (err) {
