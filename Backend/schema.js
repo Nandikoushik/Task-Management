@@ -37,8 +37,6 @@ export const initSchema = () => {
 }
 
 export const getTaskModel = () => {
-    if (!Task) {
-        initSchema();
-    }
+    if (!Task) initSchema();
     return Task;
 }

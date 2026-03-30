@@ -1,17 +1,17 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import AddTask from "../component/add";
-import ViewTask from "../component/view";
-import EditTask from "../component/edit";
-import GetTaskList from "../component/list";
+import AddTask from "../components/add";
+import ViewTask from "../components/view";
+import EditTask from "../components/edit";
+import GetTaskList from "../components/list";
 
 export const AppRoutes = () => (
   <Router>
     <Routes>
       <Route path="/add" element={<AddTask />} />
       <Route path="/" element={<GetTaskList />} />
-      <Route path="/:id" element={<ViewTask />} />
       <Route path="/edit/:id" element={<EditTask />} />
+      <Route path="/details/:id" element={<ViewTask />} />
     </Routes>
   </Router>
 );
